@@ -43,15 +43,15 @@ theme:
     logo: logo
 
 # Plugins
-plugins:
-  - projects:
-      projects_dir: examples
-      projects_config_transform: !!python/name:examples.transform
-      log_level: info
+# plugins:
+#   - projects:
+#       projects_dir: examples
+#       projects_config_transform: !!python/name:examples.transform
+#       log_level: info
 
 # Hooks
-hooks:
-  - hooks/archive.py
+# hooks:
+#   - hooks/archive.py
 
 validation:
   nav:
