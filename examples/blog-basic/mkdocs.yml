@@ -1,4 +1,5 @@
 # Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+#                         Alex Voss <alex@corealisation.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -18,16 +19,23 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Requirements for core
-mergedeep
-mkdocs-material
-cairosvg
-pillow
+# -----------------------------------------------------------------------------
+# Recommended: set up configuration validation, see https://t.ly/xpZXU
+# -----------------------------------------------------------------------------
 
-# Requirements for integrations
-mkdocs-git-committers-plugin-2
-mkdocs-git-revision-date-localized-plugin
-mkdocs-glightbox
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-rss-plugin
+# Project information
+site_name: Basic blog setup example
+
+# Theme
+theme:
+  name: material
+
+# Plugins
+plugins:
+  - search
+  - blog
+
+nav:
+  - Home: index.md
+  - Blog:
+    - blog/index.md

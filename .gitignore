@@ -18,16 +18,39 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Requirements for core
-mergedeep
-mkdocs-material
-cairosvg
-pillow
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
 
-# Requirements for integrations
-mkdocs-git-committers-plugin-2
-mkdocs-git-revision-date-localized-plugin
-mkdocs-glightbox
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-rss-plugin
+# Dependencies
+/venv
+
+# Build files
+build
+site
+
+# Generated files
+*.zip
+
+# Caches and logs
+*.log
+.cache
+__pycache__
+
+# -----------------------------------------------------------------------------
+# General
+# -----------------------------------------------------------------------------
+
+# Never ignore .gitkeep files
+!**/.gitkeep
+
+# macOS internals
+.DS_Store
+
+# Temporary files
+TODO
+tmp
+
+# IDEs & Editors
+.idea
+*~

@@ -1,4 +1,5 @@
 # Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+#                         Alex Voss <alex@corealisation.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -18,16 +19,32 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Requirements for core
-mergedeep
-mkdocs-material
-cairosvg
-pillow
+# -----------------------------------------------------------------------------
+# Recommended: set up configuration validation, see https://t.ly/xpZXU
+# -----------------------------------------------------------------------------
 
-# Requirements for integrations
-mkdocs-git-committers-plugin-2
-mkdocs-git-revision-date-localized-plugin
-mkdocs-glightbox
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-rss-plugin
+# Project information
+site_name: Blog with RSS example            # required by RSS plugin
+site_description: one of many fine examples # required by RSS plugin
+site_url: http://localhost:8080             # required by RSS plugin
+
+# Theme
+theme:
+  name: material
+
+# Plugins
+plugins:
+  - search
+  - blog # https://squidfunk.github.io/mkdocs-material/plugins/blog/
+  - rss: # https://pypi.org/project/mkdocs-rss-plugin/
+      match_path: blog/posts/.*
+      date_from_meta:
+              as_creation: "date" # means from page.meta.date
+              as_update: "git" # means from git log
+              datetime_format: "%Y-%m-%d %H:%M"
+              default_time: "09:30"
+              default_timezone: Europe/Berlin
+
+      categories:
+        - categories
+        - tags

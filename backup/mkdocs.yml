@@ -20,18 +20,18 @@
 
 # Project information
 site_name: Material for MkDocs
-site_url: https://mkdocs-material.github.io/examples/
-site_author: Martin Donath
+site_url: https://nshadskiy.github.io/
+site_author: Nikita Shadskiy
 site_description: >-
   An ever-growing collection of self-contained example uses of Material for
   MkDocs that you can download and run to get started quickly
 
 # Repository
-repo_name: mkdocs-material/examples
-repo_url: https://github.com/mkdocs-material/examples
+repo_name: nshadskiy/nshadskiy.github.io
+repo_url: https://github.com/nshadskiy/nshadskiy.github.io
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2023 Martin Donath
+copyright: Copyright &copy; 2025 Nikita Shadskiy
 
 # Theme
 theme:
@@ -45,15 +45,15 @@ theme:
     logo: logo
 
 # Plugins
-plugins:
-  - projects:
-      projects_dir: examples
-      projects_config_transform: !!python/name:examples.transform
-      log_level: info
+# plugins:
+#   - projects:
+#       projects_dir: examples
+#       projects_config_transform: !!python/name:examples.transform
+#       log_level: info
 
 # Hooks
-hooks:
-  - hooks/archive.py
+# hooks:
+#   - hooks/archive.py
 
 validation:
   nav:

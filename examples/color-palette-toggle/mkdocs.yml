@@ -18,16 +18,36 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-# Requirements for core
-mergedeep
-mkdocs-material
-cairosvg
-pillow
+# -----------------------------------------------------------------------------
+# Recommended: set up configuration validation, see https://t.ly/xpZXU
+# -----------------------------------------------------------------------------
 
-# Requirements for integrations
-mkdocs-git-committers-plugin-2
-mkdocs-git-revision-date-localized-plugin
-mkdocs-glightbox
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-rss-plugin
+# Project information
+site_name: Using the color palette toggle
+
+# Theme
+theme:
+  name: material
+  features:
+    - navigation.sections
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# Markdown extensions
+markdown_extensions:
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
