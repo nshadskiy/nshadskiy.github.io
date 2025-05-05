@@ -1,3 +1,3 @@
 # Examples
 
-This repository contains runnable examples for [Material for MkDocs].
+This repository contains runnable example for [Material for MkDocs].
